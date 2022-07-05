@@ -1,0 +1,26 @@
+<nav class="navbar">
+  <p>FLAG QUIZ</p>
+  <div class="dropdown">
+    <button class="dropbtn">{{'Choose language' | translate}}</button>
+    <div class="dropdown-content">
+      <div class="lang-button" (click)="languages.setLanguage('ua')">
+        <img
+          src="http://purecatamphetamine.github.io/country-flag-icons/1x1/UA.svg"
+          class="flag"
+          id="UA_Locale"
+        />
+        <label for="UA_Locale">Українська</label>
+      </div>
+      <div class="lang-button" (click)="languages.setLanguage('en')">
+        <img
+          src="http://purecatamphetamine.github.io/country-flag-icons/1x1/GB.svg"
+          class="flag"
+          id="Eng_Locale"
+        />
+        <label for="Eng_Locale">English</label>
+      </div>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+
