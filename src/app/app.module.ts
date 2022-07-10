@@ -10,6 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { QuizPageComponent } from './quiz-page/quiz-page.component';
 // import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { StartPageComponent } from './start-page/start-page.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -19,7 +20,8 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [
     AppComponent,
     NavbarComponent,
-    QuizPageComponent
+    QuizPageComponent,
+    StartPageComponent
   ],
     imports: [
         BrowserModule,

@@ -26,7 +26,7 @@ export class QuizPageComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-
+    console.log(this.random.randomUniqueNum(164, 4))
   }
 
   getCountry(id: number){
