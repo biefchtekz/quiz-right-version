@@ -1,4 +1,12 @@
 {
+  "End?": "End the journey?",
+  "No": "No, keep playing",
+  "Yes": "Yes, bring me home",
+  "Correct": "It's correct! :)",
+  "Incorrect": "Incorrect answer :(",
+  "Correct is": "The right answer is",
+  "Start": "Begin your journey",
+  "Next": "Next",
   "Choose language": "Choose language",
   "Countries" : [
   "Afghanistan",

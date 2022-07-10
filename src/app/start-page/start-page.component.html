@@ -1,4 +1,8 @@
-<div class="wrap">
-  <button (click)="start()">Start</button>
+<div class="wrap start">
+  <img
+    [src]="imgSrc"
+    class="flag start-page-flag"
+  />
+  <button (click)="start()" class="start-button">{{"Start" | translate}}</button>
 </div>
 

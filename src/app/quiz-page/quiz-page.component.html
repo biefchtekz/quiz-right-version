@@ -12,14 +12,14 @@
     <p>{{gamestats.score}}</p>
   </div>
   <img
-    src="http://purecatamphetamine.github.io/country-flag-icons/3x2/UA.svg"
+    [src]="imgSrc"
     class="flag"
   />
   <div class="answer-buttons" id="answerButtons">
-    <button class="answ-btn" id="0">{{getCountry(gamestats.answers[0])}}</button>
-    <button class="answ-btn" id="1">{{getCountry(gamestats.answers[1])}}</button>
-    <button class="answ-btn" id="2">{{getCountry(gamestats.answers[2])}}</button>
-    <button class="answ-btn" id="3">{{getCountry(gamestats.answers[3])}}</button>
+    <button class="answ-btn" (click)="selectAnswer(gamestats.answers[0])">{{getCountry(gamestats.answers[0])}}</button>
+    <button class="answ-btn" (click)="selectAnswer(gamestats.answers[1])">{{getCountry(gamestats.answers[1])}}</button>
+    <button class="answ-btn" (click)="selectAnswer(gamestats.answers[2])">{{getCountry(gamestats.answers[2])}}</button>
+    <button class="answ-btn" (click)="selectAnswer(gamestats.answers[3])">{{getCountry(gamestats.answers[3])}}</button>
   </div>
   <div class="answer-buttons nav-buttons">
 <!--    <button class="nav-btn btn-home" (click)="returnHome()" id="4">{{ 'Home' | translate }}</button>-->
