@@ -11,37 +11,10 @@ import {LanguageService} from "./shared/language.service";
 })
 export class AppComponent implements OnInit{
 
-  country = ''
-  answerCountry = ''
-  number = -1
-
-  constructor(
-    private translate: TranslateService,
-    private getCodes: DatabaseService,
-    public languages: LanguageService
-  ) {}
-
-  randomInRange(min: number, max: number){
-    return Math.floor(Math.random() * max) + min
-  }
-
-  getCountry(){
-    this.getCodes.getAll().subscribe(res => {
-      // @ts-ignore
-      this.answerCountry = res[this.number]
-    })
-    this.translate.get('Countries').subscribe((res: []) => {
-      this.country = res[this.number]
-    });
-  }
-
-  setCountry() {
-    this.number = this.randomInRange(0,164)
-    this.getCountry()
-  }
+  constructor() {}
 
   ngOnInit(): void {
-    localStorage.setItem('lang', 'ua')
+    if (!localStorage.getItem('lang')) localStorage.setItem('lang', 'en')
   }
 
 

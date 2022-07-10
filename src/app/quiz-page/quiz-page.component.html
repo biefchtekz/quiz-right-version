@@ -1,1 +1,34 @@
-<p>quiz-page works!</p>
+<img
+  [src]=imgSrc
+  class="flag hidden"
+  (load)="flagHere = true"
+/>
+<div class="wrap" *ngIf="flagHere">
+  <div class="status-bar">
+    <span class="material-icons hp" [ngClass]="{invalid: gamestats.hpLeft < 1}">favorite</span>
+    <span class="material-icons hp" [ngClass]="{invalid: gamestats.hpLeft < 2}">favorite</span>
+    <span class="material-icons hp" [ngClass]="{invalid: gamestats.hpLeft < 3}">favorite</span>
+    <p class="material-icons line">horizontal_rule</p>
+    <p>{{gamestats.score}}</p>
+  </div>
+  <img
+    src="http://purecatamphetamine.github.io/country-flag-icons/3x2/UA.svg"
+    class="flag"
+  />
+  <div class="answer-buttons" id="answerButtons">
+    <button class="answ-btn" id="0">{{getCountry(gamestats.answers[0])}}</button>
+    <button class="answ-btn" id="1">{{getCountry(gamestats.answers[1])}}</button>
+    <button class="answ-btn" id="2">{{getCountry(gamestats.answers[2])}}</button>
+    <button class="answ-btn" id="3">{{getCountry(gamestats.answers[3])}}</button>
+  </div>
+  <div class="answer-buttons nav-buttons">
+<!--    <button class="nav-btn btn-home" (click)="returnHome()" id="4">{{ 'Home' | translate }}</button>-->
+<!--    <button class="nav-btn btn-next" [ngClass]="{invalid: post == -1}" (click)="next()" id="5">{{ 'Next' | translate }}</button>-->
+  </div>
+</div>
+<!--<ng-template #loading>-->
+<!--  <mat-progress-bar mode="indeterminate" style="height: 10px"></mat-progress-bar>-->
+<!--</ng-template>-->
+
+
+
