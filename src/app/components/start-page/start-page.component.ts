@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {gameStats} from "../shared/interfaces";
+import {gameStats} from "../../interfaces/interfaces";
 import {Router, RouterModule} from "@angular/router";
-import {RandomService} from "../shared/random.service";
-import {DatabaseService} from "../shared/database.service";
+import {RandomService} from "../../services/random.service";
+import {DatabaseService} from "../../services/database.service";
 
 @Component({
   selector: 'app-start-page',

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {LanguageService} from "../shared/language.service";
+import {LanguageService} from "../../services/language.service";
 import {ActivatedRoute, Route, Router} from "@angular/router";
-import {DialogsService} from "../shared/dialogs.service";
+import {DialogsService} from "../../services/dialogs.service";
 import {map} from "rxjs";
 
 @Component({

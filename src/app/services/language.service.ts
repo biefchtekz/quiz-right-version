@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {TranslateModule, TranslateService} from "@ngx-translate/core";
-import {gameStats} from "./interfaces";
+import {gameStats} from "../interfaces/interfaces";
 
 @Injectable({
   providedIn: 'root'
@@ -12,9 +12,10 @@ export class LanguageService {
 
   constructor(
     private translate: TranslateService
-  ) { }
+  ) {
+  }
 
-  setLanguage(lang: string){
+  setLanguage(lang: string) {
     // @ts-ignore
     this.gameStats = JSON.parse(localStorage.getItem('gameStats'))
     localStorage.setItem('gameStats', JSON.stringify(
@@ -26,12 +27,12 @@ export class LanguageService {
     this.getLanguage()
   }
 
-  getLanguage(){
+  getLanguage() {
     //@ts-ignore
     this.translate.use(JSON.parse(localStorage.getItem('gameStats')).language)
   }
 
-  getCountry(id: number){
+  getCountry(id: number) {
     let country: string
     this.translate.get('Countries').subscribe((res: []) => {
       country = res[id]

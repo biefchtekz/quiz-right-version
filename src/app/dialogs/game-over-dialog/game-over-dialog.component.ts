@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {gameStats} from "../../shared/interfaces";
+import {Component, OnInit} from '@angular/core';
+import {gameStats} from "../../interfaces/interfaces";
 
 @Component({
   selector: 'app-game-over-dialog',
@@ -10,8 +10,6 @@ export class GameOverDialogComponent implements OnInit {
 
   // @ts-ignore
   score: number
-
-  constructor() { }
 
   ngOnInit(): void {
     // @ts-ignore

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 
@@ -7,9 +7,10 @@ import {Observable} from "rxjs";
 })
 export class DatabaseService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
-  getAll(): Observable<Object>{
+  getAll(): Observable<Object> {
     return this.http.get(`https://biefchtekz-flag-quiz-default-rtdb.europe-west1.firebasedatabase.app/Countries.json`)
   }
 }

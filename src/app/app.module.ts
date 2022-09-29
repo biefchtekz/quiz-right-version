@@ -1,23 +1,23 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
-import { NavbarComponent } from './navbar/navbar.component';
-import { QuizPageComponent } from './quiz-page/quiz-page.component';
+import {NavbarComponent} from './components/navbar/navbar.component';
+import {QuizPageComponent} from './components/quiz-page/quiz-page.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import { StartPageComponent } from './start-page/start-page.component';
+import {StartPageComponent} from './components/start-page/start-page.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import {CorrectDialogComponent} from "./dialogs/correct-dialog/correct-dialog.component";
 import {MatButtonModule} from "@angular/material/button";
-import { GameOverDialogComponent } from './dialogs/game-over-dialog/game-over-dialog.component';
-import { IncorrectDialogComponent } from './dialogs/incorrect-dialog/incorrect-dialog.component';
-import { ReturnDialogComponent } from './dialogs/return-dialog/return-dialog.component';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
+import {GameOverDialogComponent} from './dialogs/game-over-dialog/game-over-dialog.component';
+import {IncorrectDialogComponent} from './dialogs/incorrect-dialog/incorrect-dialog.component';
+import {ReturnDialogComponent} from './dialogs/return-dialog/return-dialog.component';
+import {ServiceWorkerModule} from '@angular/service-worker';
+import {environment} from '../environments/environment';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -59,4 +59,5 @@ export function HttpLoaderFactory(http: HttpClient) {
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+}

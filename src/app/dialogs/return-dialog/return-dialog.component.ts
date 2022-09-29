@@ -1,15 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-return-dialog',
   templateUrl: './return-dialog.component.html',
   styleUrls: ['./return-dialog.component.scss']
 })
-export class ReturnDialogComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+export class ReturnDialogComponent {
 
 }

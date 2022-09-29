@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {LanguageService} from "../../shared/language.service";
+import {Component, OnInit} from '@angular/core';
+import {LanguageService} from "../../services/language.service";
 
 @Component({
   selector: 'app-incorrect-dialog',
@@ -12,7 +12,8 @@ export class IncorrectDialogComponent implements OnInit {
 
   constructor(
     private language: LanguageService
-  ) { }
+  ) {
+  }
 
   ngOnInit(): void {
     // @ts-ignore

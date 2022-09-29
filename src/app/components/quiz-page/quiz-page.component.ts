@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import {DatabaseService} from "../shared/database.service";
-import {gameStats} from "../shared/interfaces";
+import {DatabaseService} from "../../services/database.service";
+import {gameStats} from "../../interfaces/interfaces";
 import {TranslateService} from "@ngx-translate/core";
-import {RandomService} from "../shared/random.service";
-import {DialogsService} from "../shared/dialogs.service";
+import {RandomService} from "../../services/random.service";
+import {DialogsService} from "../../services/dialogs.service";
 import {Router} from "@angular/router";
-import {LanguageService} from "../shared/language.service";
+import {LanguageService} from "../../services/language.service";
 
 @Component({
   selector: 'app-quiz-page',

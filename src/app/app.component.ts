@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {TranslateService} from "@ngx-translate/core";
-import {DatabaseService} from "./shared/database.service";
-import {LanguageService} from "./shared/language.service";
-import {gameStats} from "./shared/interfaces";
+import {DatabaseService} from "./services/database.service";
+import {LanguageService} from "./services/language.service";
+import {gameStats} from "./interfaces/interfaces";
 
 
 @Component({
@@ -10,12 +10,13 @@ import {gameStats} from "./shared/interfaces";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
 
   // @ts-ignore
   gameStats: gameStats
 
-  constructor() {}
+  constructor() {
+  }
 
   ngOnInit(): void {
     if (!localStorage.getItem('gameStats')) localStorage.setItem('gameStats', JSON.stringify(

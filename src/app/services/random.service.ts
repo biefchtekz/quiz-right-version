@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import {gameStats} from "./interfaces";
+import {Injectable} from '@angular/core';
+import {gameStats} from "../interfaces/interfaces";
 import {Router} from "@angular/router";
 
 @Injectable({
@@ -12,9 +12,10 @@ export class RandomService {
 
   constructor(
     private router: Router
-  ) { }
+  ) {
+  }
 
-  randomInRange(min: number, max: number){
+  randomInRange(min: number, max: number) {
     return Math.floor(Math.random() * max) + min
   }
 
@@ -36,7 +37,7 @@ export class RandomService {
     return result;
   }
 
-  generateNew(){
+  generateNew() {
     // @ts-ignore
     this.gameStats = JSON.parse(localStorage.getItem('gameStats'))
     localStorage.setItem('gameStats', JSON.stringify(

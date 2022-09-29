@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {CorrectDialogComponent} from "../dialogs/correct-dialog/correct-dialog.component";
 import {MatDialog} from "@angular/material/dialog";
 import {IncorrectDialogComponent} from "../dialogs/incorrect-dialog/incorrect-dialog.component";
@@ -14,7 +14,8 @@ export class DialogsService {
 
   constructor(
     private dialog: MatDialog
-  ) { }
+  ) {
+  }
 
   correctDialog() {
     let enterAnimationDuration = this.time
